@@ -1,0 +1,47 @@
+west:
+  url: https://github.com/zephyrproject-rtos/west
+  revision: v0.5.7
+
+manifest:
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: upstream
+      path: zephyr
+      revision: master
+      west-commands: scripts/west-commands.yml
+
+    - name: mcuboot
+      remote: upstream
+      path: mcuboot
+      revision: 480421999ec2d8d2a20091e4f3a0393db04de5c4
+
+    - name: cmsis
+      revision: master
+      path: modules/hal/cmsis
+
+    - name: net-tools
+      revision: master
+      path: tools/net-tools
+
+    - name: hal_nordic
+      revision: 00580f43b9d48f2079d611ce12f0fbc78d3040f1
+      path: modules/hal/nordic
+
+    - name: mbedtls
+      revision: cf7020eb4c7ef93319f2d6d2403a21e12a879bf6
+      path: modules/crypto/mbedtls
+
+    - name: mcumgr
+      revision: d4e97cd4fc80ff949415062b1c83fd42929e8fe4
+      path: modules/lib/mcumgr
+
+    - name: segger
+      revision: 6fcf61606d6012d2c44129edc033f59331e268bc
+      path: modules/debug/segger

@@ -1,8 +1,0 @@
-# CON-A board configuration (nRF52-DK by another name)
-
-# Copyright (c) 2016 Nordic Semiconductor ASA
-# SPDX-License-Identifier: Apache-2.0
-
-config BOARD_CON_A
-	bool "CON-A - actually nRF52-DK"
-	depends on SOC_NRF52832_QFAA
